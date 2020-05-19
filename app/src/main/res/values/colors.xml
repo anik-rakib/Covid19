@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#222222</color>
+    <color name="colorPrimaryDark">#002d72</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <color name="colorTotalConfirmed">#e60000</color>
+    <color name="colorTotalDeaths">#999999</color>
+    <color name="colorTotalRecovered">#7bb974</color>
+    <color name="colorTotalTests">#FFFFFF</color>
+
+    <color name="light_red">#FFCDD2</color>
+    <color name="light_green">#C8E6C9</color>
+    <color name="light_blue">#BBDEFB</color>
+    <color name="light_yellow">#FFECB3</color>
+
+    <color name="dark_red">#D32F2F</color>
+    <color name="dark_green">#388E3C</color>
+    <color name="dark_blue">#1976D2</color>
+    <color name="dark_yellow">#FBC02D</color>
+    <color name="ic_launcher_background">#FFFFFF</color>
+
+
+    <color name="textPrimary">#D5D5D5</color>
+    <color name="textAccent">#121212</color>
+    <color name="txtWhite">#FFFFFF</color>
+    <color name="deathColor">#E90B18</color>
+    <color name="recoveredColor">#6EA91E</color>
+    <color name="totalColor">#FFCA28</color>
+
+    <color name="txtGrey">#6B6B6B</color>
+</resources>
