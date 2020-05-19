@@ -23,7 +23,6 @@ public class BangladeshDistrict {
         return mYesterday;
     }
 
-
     public int describeContents() {
         return 0;
     }

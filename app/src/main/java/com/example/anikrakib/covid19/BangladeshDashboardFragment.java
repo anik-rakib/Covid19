@@ -1,14 +1,17 @@
 package com.example.anikrakib.covid19;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.android.volley.Request;
@@ -27,12 +30,8 @@ import java.util.List;
 
 
 public class BangladeshDashboardFragment extends Fragment {
-    private TextView bdLastUpdated,positivecases,activecases,totalrecover,totaldeath;
-    RecyclerView districtRecyclerView;
-    BangladeshDistrictAdapter bangladeshDistrictAdapter;
+    private TextView bdLastUpdated,positivecases,activecases,totalrecover,totaldeath,viewDistrict;
 
-    private static final String TAG = BangladeshDistrict.class.getSimpleName();
-    List<BangladeshDistrict> bangladeshDistrict;
 
 
     @Override
@@ -46,70 +45,27 @@ public class BangladeshDashboardFragment extends Fragment {
         activecases = root.findViewById(R.id.activeTv);
         totalrecover = root.findViewById(R.id.recoveredTv);
         totaldeath = root.findViewById(R.id.deceasedTv);
-        districtRecyclerView = root.findViewById(R.id.districtlist);
+        viewDistrict = root.findViewById(R.id.viewAll);
+
 
         getActivity().setTitle("Bd Details");
 
         // call Volley
         getData();
 
-        bangladeshDistrict = new ArrayList<>();
-        getDistrictFromServer();
+        viewDistrict.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), BangladeshDistrictWiseUpdate.class);
+                startActivity(intent);
+            }
+        });
+
 
         return root;
     }
-    private void showRecyclerView() {
-        bangladeshDistrictAdapter = new BangladeshDistrictAdapter(bangladeshDistrict,getActivity());
-        districtRecyclerView.setAdapter(bangladeshDistrictAdapter);
-
-//        ItemClickSupport.addTo(rvCovidCountry).setOnItemClickListener(new ItemClickSupport.OnItemClickListener() {
-//            @Override
-//            public void onItemClicked(RecyclerView recyclerView, int position, View v) {
-//                showSelectedCovidCountry(covidCountries.get(position));
-//            }
-//        });
-    }
 
 
-    private void getDistrictFromServer() {
-        String url = "https://corona-bd.herokuapp.com/district";
-
-        StringRequest stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
-            @Override
-            public void onResponse(String response) {
-                if (response != null) {
-                    Log.e(TAG, "onResponse: " + response);
-                    try {
-                        JSONArray jsonArray = new JSONArray(response);
-                        for (int i = 0; i < jsonArray.length(); i++) {
-                            JSONObject data = jsonArray.getJSONObject(i);
-
-                            // Extract JSONObject inside JSONObject
-                            JSONObject countryInfo = data.getJSONObject("data");
-
-                            bangladeshDistrict.add(new BangladeshDistrict(
-                                    countryInfo.getString("name"), countryInfo.getString("count"),
-                                    countryInfo.getString("prev_count")
-                            ));
-                        }
-
-
-                        showRecyclerView();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                }
-            }
-        },
-                new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-
-                        Log.e(TAG, "onResponse: " + error);
-                    }
-                });
-        Volley.newRequestQueue(getActivity()).add(stringRequest);
-    }
 
 
     private void getData() {

@@ -21,12 +21,14 @@
             android:background="@drawable/custom"
             android:orientation="vertical"
             android:clipToPadding="true"
-            android:layout_margin="16dp">
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp">
 
             <ImageView
                 android:layout_width="120dp"
-                android:layout_height="80dp"
-                android:layout_marginTop="10dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="5dp"
                 android:src="@drawable/coronaviruslogo"
                  />
 
@@ -80,180 +82,334 @@
 
         </LinearLayout>
 
-
-        <LinearLayout
-            android:id="@+id/topContainer"
+        <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/top"
-            android:layout_margin="16dp">
+            android:layout_marginBottom="8dp"
+            >
 
             <LinearLayout
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
                 android:orientation="vertical">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Positive"
-                    android:textAllCaps="true"
-                    android:textColor="@color/dark_red"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
 
-                <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="48dp"
-                    android:layout_marginTop="4dp"
-                    android:src="@drawable/coronavirus"
-                    android:tint="@color/dark_red" />
+            <LinearLayout
+                android:id="@+id/topContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp">
 
-                <TextView
-                    android:id="@+id/confirmedTv"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:textAllCaps="true"
-                    android:textColor="@color/dark_red"
-                    android:textSize="18sp"
-                    android:text=""
-                    android:textStyle="bold" />
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Positive"
+                        android:textAllCaps="true"
+                        android:textColor="@color/dark_red"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="4dp"
+                        android:src="@drawable/coronavirus"
+                        android:tint="@color/dark_red" />
+
+                    <TextView
+                        android:id="@+id/confirmedTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAllCaps="true"
+                        android:textColor="@color/dark_red"
+                        android:textSize="18sp"
+                        android:text=""
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Active"
+                        android:textAllCaps="true"
+                        android:textColor="@color/dark_blue"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="4dp"
+                        android:src="@drawable/patient"
+                        android:tint="@color/dark_blue" />
+
+                    <TextView
+                        android:id="@+id/activeTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAllCaps="true"
+                        android:textColor="@color/dark_blue"
+                        android:textSize="18sp"
+                        android:text=""
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Recovered"
+                        android:textAllCaps="true"
+                        android:textColor="@color/dark_green"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="4dp"
+                        android:src="@drawable/recoverd"
+                        android:tint="@color/dark_green" />
+
+                    <TextView
+                        android:id="@+id/recoveredTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAllCaps="true"
+                        android:textColor="@color/dark_green"
+                        android:textSize="18sp"
+                        android:text=""
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Death"
+                        android:textAllCaps="true"
+                        android:textColor="@color/dark_yellow"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="4dp"
+                        android:src="@drawable/dead"
+                        android:tint="@color/dark_yellow" />
+
+                    <TextView
+                        android:id="@+id/deceasedTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAllCaps="true"
+                        android:textColor="@color/dark_yellow"
+                        android:textSize="18sp"
+                        android:text=""
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
 
 
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Active"
-                    android:textAllCaps="true"
-                    android:textColor="@color/dark_blue"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
-                <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginTop="4dp"
-                    android:src="@drawable/patient"
-                    android:tint="@color/dark_blue" />
-
-                <TextView
-                    android:id="@+id/activeTv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAllCaps="true"
-                    android:textColor="@color/dark_blue"
-                    android:textSize="18sp"
-                    android:text=""
-                    android:textStyle="bold" />
-
-
-            </LinearLayout>
+    <!--        <ListView-->
+    <!--            android:id="@+id/list"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_below="@+id/topContainer"-->
+    <!--            tools:listheader="@layout/list_header"-->
+    <!--            tools:listitem="@layout/item_list_district"-->
+    <!--            android:layout_marginBottom="16dp"/>-->
 
 
             <LinearLayout
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
+                android:layout_below="@id/topContainer"
                 android:orientation="vertical">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Recovered"
-                    android:textAllCaps="true"
-                    android:textColor="@color/dark_green"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
 
-                <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginTop="4dp"
-                    android:src="@drawable/recoverd"
-                    android:tint="@color/dark_green" />
-
-                <TextView
-                    android:id="@+id/recoveredTv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAllCaps="true"
-                    android:textColor="@color/dark_green"
-                    android:textSize="18sp"
-                    android:text=""
-                    android:textStyle="bold" />
+                    <LinearLayout
+                        android:id="@+id/viewDistrict"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
 
 
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:orientation="horizontal"
+                            android:padding="7px">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/gilroybold"
+                                android:padding="7dp"
+                                android:text="District Wise Update"
+                                android:textColor="@color/txtWhite"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/viewAll"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="20dp"
+                                android:fontFamily="@font/gilroybold"
+                                android:text="View All"
+                                android:textColor="@color/txtGrey"
+                                android:textSize="10sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp"
+                            android:layout_below="@id/viewDistrict"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            android:background="@drawable/custom2"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="20dp"
+                                android:fontFamily="@font/gilroybold"
+                                android:text="To Know More About COVID-19 District Update"
+                                android:textColor="@color/txtWhite"
+                                android:textSize="15sp" />
+
+
+                            <ImageView
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/map_bd" />
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/viewDistrict"
+                        android:orientation="vertical">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:orientation="horizontal"
+                            android:padding="7px">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/gilroybold"
+                                android:padding="7dp"
+                                android:text="Graphical Chart"
+                                android:textColor="@color/txtWhite"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/viewChart"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="20dp"
+                                android:fontFamily="@font/gilroybold"
+                                android:text="View chart"
+                                android:textColor="@color/txtGrey"
+                                android:textSize="10sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/districtWiseLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp"
+                            android:layout_below="@id/viewDistrict"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            android:background="@drawable/custom3"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:padding="10dp">
+
+                            <ImageView
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/chart" />
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:fontFamily="@font/gilroybold"
+                                android:text="To see COVID-19 Graphical View"
+                                android:textColor="@color/txtWhite" />
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
             </LinearLayout>
-
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Death"
-                    android:textAllCaps="true"
-                    android:textColor="@color/dark_yellow"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
-                <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginTop="4dp"
-                    android:src="@drawable/dead"
-                    android:tint="@color/dark_yellow" />
-
-                <TextView
-                    android:id="@+id/deceasedTv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAllCaps="true"
-                    android:textColor="@color/dark_yellow"
-                    android:textSize="18sp"
-                    android:text=""
-                    android:textStyle="bold" />
-
-
-            </LinearLayout>
-
-
-        </LinearLayout>
-
-<!--        <ListView-->
-<!--            android:id="@+id/list"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_below="@+id/topContainer"-->
-<!--            tools:listheader="@layout/list_header"-->
-<!--            tools:listitem="@layout/item_list_district"-->
-<!--            android:layout_marginBottom="16dp"/>-->
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/districtlist"
-            android:layout_width="match_parent"
-            android:layout_height="400dp"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="20dp"
-            tools:listitem="@layout/list_header" />
-
-
+        </androidx.core.widget.NestedScrollView>
     </RelativeLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

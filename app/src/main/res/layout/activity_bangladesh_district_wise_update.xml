@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="2"
+            android:text="District"
+            android:textAllCaps="false"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1.5"
+            android:text="Total Death"
+            android:textAllCaps="false"
+            android:textAlignment="center"
+            android:textColor="@color/dark_red"
+            android:textStyle="bold"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1.5"
+            android:text="Today Cases"
+            android:textAllCaps="false"
+            android:textAlignment="center"
+            android:textColor="@color/dark_blue"
+            android:textStyle="bold"
+            android:gravity="center" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1.5"
+            android:text="Total Cases"
+            android:textAllCaps="false"
+            android:textAlignment="center"
+            android:textColor="@color/dark_green"
+            android:textStyle="bold"
+            android:gravity="center" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1.5"
+            android:text="Prev Cases"
+            android:textAllCaps="false"
+            android:textAlignment="center"
+            android:textColor="@color/dark_yellow"
+            android:textStyle="bold"
+            android:gravity="center" />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_marginRight="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_height="1dp"
+        android:background="@color/colorPrimaryDark"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/districtList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        tools:listitem="@layout/item_list_district" />
+
+</LinearLayout>

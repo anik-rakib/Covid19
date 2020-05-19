@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
-    tools:context=".ui.home.HomeFragment">
+    tools:context="HomeFragment">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -19,10 +19,11 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="24dp"
             android:fontFamily="@font/moonhouse"
-            android:text="Coronavirus COVID-19\nGlobal Cases"
+            android:text="COVID-19\nGLOBAL CASES"
             android:textAlignment="center"
             android:textColor="#fff"
-            android:textSize="24dp" />
+            android:textSize="24dp"
+            android:gravity="center_horizontal" />
 
         <TextView
             android:id="@+id/tvLabelTotalConfirmed"
@@ -110,7 +111,8 @@
                     android:textColor="@color/colorTotalConfirmed"
                     android:textSize="26sp"
                     android:background="@drawable/custom"
-                    tools:text="3245" />
+                    tools:text="3245"
+                    android:gravity="center_horizontal" />
             </LinearLayout>
 
             <LinearLayout
